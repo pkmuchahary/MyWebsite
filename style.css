@@ -208,6 +208,7 @@ img{
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 .book-list img{
     width: 150px;
@@ -218,14 +219,16 @@ body{
 }
 @media (max-width: 768px) {
 
-nav ul {
+nav ul {{
+display: flex
 flex-direction: column;
-text-align: center;
+align-items-center;
+padding:0;
 }
 
 .books {
 display: grid;
-grid-template-columns: 1fr 1fe;
+grid-template-columns: 1fr 1fr;
 gap: 20px;
 }
 
@@ -238,4 +241,13 @@ body{
 background-size: cover;
 background-position: center;
 }
+body{
+    overflow-x: hidden;
+}
+.book-list{
+    flex-wrap:wrap
+    justify-content: center;
+img{
+    max-width:100px;
+    height:auto;
 }
